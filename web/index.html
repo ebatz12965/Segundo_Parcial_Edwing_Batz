@@ -6,11 +6,106 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Segundo Parcial</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/script.js"></script>
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body> 
+        
+        <!--Inicio de NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>    
+    
+        <!--Inicio de Form-->
+    <div class="d-flex justify-content-around">
+        <div class="p-3 bd-highlight">
+        <h1>Formulario para Registrar Libros</h1>
+        
+            <!-- Inicio del Formulario -->
+            <form action="ServletLibro">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="InputCode">Código del Libro</label>
+                  <input class="form-control" type="text" placeholder="ingrese el código del libro" name="codigo">
+                </div>
+                <div class="form-group">
+                  <label for="InputName">Nombre del Libro</label>
+                  <input class="form-control" type="text" placeholder="ingrese el nombre del libro" name="nombre">
+                </div>
+                <div class="form-group">
+                  <label for="InputPast">Tipo de Pasta</label>
+                  <input class="form-control" type="text" placeholder="¿qué pasta es?" name="past">
+                 </div>
+                <div class="form-group">
+                  <label for="InputEdit">Editorial del Libro</label>
+                  <input class="form-control" type="text" placeholder="ingrese la editorial" name="editorial">
+                 </div>
+                <div class="form-group">
+                  <label for="InputYear">Año de Publicación</label>
+                  <input class="form-control" type="text" placeholder="ingrese el año de publicación del libro" name="año">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-danger">Cancelar</button>
+                <!-- Fin del Formulario -->
+            </form>  
+        </div>
+       <div class="p-3 bd-highlight">
+            <div class="container" id="container2">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <td>Codigo de Libro</td>
+                            <td>Nombre del Libro</td>
+                            <td>Tipo de Pasta</td>
+                            <td>Editorial</td>
+                            <td>Año de Publicación</td>                       
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTable">
+
+                    </tbody>                     
+                </table>
+            </div>
+        </div>
+        </div>
     </body>
 </html>
