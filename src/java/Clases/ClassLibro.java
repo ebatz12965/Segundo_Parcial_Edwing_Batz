@@ -15,7 +15,7 @@ import java.sql.SQLException;
  * @author Edwing
  */
 public class ClassLibro{
-      Libro[] tablaALumno;
+      Libro[] tablaLibro;
     int indiceArray;
     private ConexionBaseDeDatos conectorBD;
     private Connection conexion;
@@ -23,19 +23,19 @@ public class ClassLibro{
     private ResultSet result = null;
     
     public ClassLibro(){
-        this.tablaALumno = new Libro[100];
+        this.tablaLibro = new Libro[100];
         this.indiceArray=0;
     }
     
      public void guardarAlumno(Libro libro){
-        this.tablaALumno[this.indiceArray]=libro;  
+        this.tablaLibro[this.indiceArray]=libro;  
         this.indiceArray=this.indiceArray+1;
         // procedimiento para almacenar en la Base de Datos
     }
      
      
-public Libro[] getLibro(){
-        return this.tablaALumno;
+    public Libro[] getLibro(){
+        return this.tablaLibro;
     }
     
     public void abrirConexion(){
@@ -53,7 +53,7 @@ public String guardarLibro2(Libro libro){
             statement.setString(2, libro.getNombre());
             statement.setString(3, libro.getPasta());
             statement.setString(4, libro.getEditorial());
-            statement.setInt(5, libro.getYear());
+            statement.setString(5, libro.getYear());
                 int resultado = statement.executeUpdate(); 
                 if(resultado > 0){
                     return String.valueOf(resultado);

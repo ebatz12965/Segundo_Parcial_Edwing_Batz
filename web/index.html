@@ -83,8 +83,13 @@ and open the template in the editor.
                   <input class="form-control" type="text" placeholder="ingrese el año de publicación del libro" name="year" id="year">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Guardar</button>
-                <button type="button" class="btn btn-danger">Cancelar</button>
+               <select class="form-control" name="opcion">
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+            </select><br>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="button" onclick="enviarFormularioOpcion2()" class="btn btn-success">Guardar con JS</button>
+             <button type="button" class="btn btn-danger">Cancelar</button>
                 <!-- Fin del Formulario -->
             </form>  
         </div>

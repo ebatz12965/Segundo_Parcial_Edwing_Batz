@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 
+import Clases.Libro;
+import Clases.ClassLibro;
+import Clases.ConexionBaseDeDatos;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -41,7 +44,7 @@ public class ServletLibro extends HttpServlet {
            String control = request.getParameter("control");
            
            if(control.toUpperCase().equals("GUARDAR")){
-               libro=new Libro(
+               libro = new Libro(
                 Integer.parseInt(request.getParameter("codigo")),
                 request.getParameter("nombre"),
                 request.getParameter("pasta"),
